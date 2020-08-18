@@ -19,6 +19,7 @@ const theme = {
   colors: {
     ...DefaultTheme.colors,
     primary: '#f7f4ff',
+    action: '#d02540',
   },
 };
 
@@ -28,7 +29,7 @@ const App: () => React$Node = () => {
   return (
     <>
       <NavigationContainer>
-        <PaperProvider>
+        <PaperProvider theme={theme}>
           <StatusBar barStyle="dark-content" />
           <SafeAreaView style={{flex: 1}}>
             <Drawer.Navigator initialRouteName="Home">
