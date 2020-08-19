@@ -18,7 +18,9 @@ export default withTheme(({theme}) => {
         <Text style={{fontSize: 24, fontWeight: 'bold'}}>
           {I18n.t('subcategoriesTitle')}
         </Text>
-        <Text style={{fontSize: 16}}>{I18n.t('detailsDescription')}</Text>
+        <Text style={{fontSize: 16, fontFamily: 'American Typewriter'}}>
+          {I18n.t('detailsDescription')}
+        </Text>
       </View>
 
       <TextInput

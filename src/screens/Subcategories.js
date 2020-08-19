@@ -12,10 +12,10 @@ export default withTheme(({theme, navigation, route}) => {
       (key) => subcategories[key],
     );
 
-    return elementsArray.map((element) => (
+    return elementsArray.map((element, index) => (
       <ListElement
         value={element}
-        key={element.order}
+        key={index}
         navigation={navigation}
         target={'Details'}
       />
@@ -33,7 +33,9 @@ export default withTheme(({theme, navigation, route}) => {
         <Text style={{fontSize: 24, fontWeight: 'bold'}}>
           {I18n.t('subcategoriesTitle')}
         </Text>
-        <Text style={{fontSize: 16}}>{I18n.t('subcategoriesSubtitle')}</Text>
+        <Text style={{fontSize: 16, fontFamily: 'American Typewriter'}}>
+          {I18n.t('subcategoriesSubtitle')}
+        </Text>
       </View>
       <ScrollView>{renderSubcategories()}</ScrollView>
     </View>

@@ -21,7 +21,7 @@ export default withTheme(({navigation, theme}) => {
           element.icon && element.subcategories
             ? 'Subcategories'
             : !element.icon
-            ? 'Details'
+            ? 'Map'
             : 'Categories'
         }
       />
@@ -39,7 +39,10 @@ export default withTheme(({navigation, theme}) => {
         <Text style={{fontSize: 24, fontWeight: 'bold'}}>
           {I18n.t('categoryTitle')}
         </Text>
-        <Text style={{fontSize: 16}}> {I18n.t('categorySubtitle')}</Text>
+        <Text style={{fontSize: 16, fontFamily: 'American Typewriter'}}>
+          {' '}
+          {I18n.t('categorySubtitle')}
+        </Text>
       </View>
 
       <View>{renderImages()}</View>
