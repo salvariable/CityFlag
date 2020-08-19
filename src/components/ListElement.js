@@ -1,11 +1,19 @@
 import * as React from 'react';
 import {Image} from 'react-native';
 import {List} from 'react-native-paper';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import {TouchableHighlight} from 'react-native-gesture-handler';
 
-export default ({value}) => {
+export default ({value, navigation, target}) => {
   return (
-    <TouchableOpacity style={{borderBottomWidth: 1}} onPress={() => {}}>
+    <TouchableHighlight
+      activeOpacity
+      underlayColor={'purple'}
+      style={{borderBottomWidth: 1}}
+      onPress={() =>
+        navigation.navigate(target, {
+          subcategories: value.subcategories ? value.subcategories : null,
+        })
+      }>
       <List.Item
         style={{margin: 16}}
         title={value.name.en}
@@ -27,6 +35,6 @@ export default ({value}) => {
           />
         )}
       />
-    </TouchableOpacity>
+    </TouchableHighlight>
   );
 };
