@@ -6,7 +6,6 @@ import {TouchableHighlight} from 'react-native-gesture-handler';
 export default ({value, navigation, target}) => {
   return (
     <TouchableHighlight
-      activeOpacity
       underlayColor={'purple'}
       style={{borderBottomWidth: 1}}
       onPress={() =>
